@@ -1,3 +1,26 @@
+/*
+Package catfacts implements Echo middleware that to add cat facts in headers of HTTP responses.
+Example:
+  package main
+
+  import (
+    "net/http"
+
+    "github.com/labstack/echo/v4"
+    catfacts "github.com/regentag/cat-facts"
+  )
+
+  func main() {
+    e := echo.New()
+
+    e.Use(catfacts.CatFactsMiddleware)
+
+    e.GET("/", func(c echo.Context) error {
+      return c.String(http.StatusOK, "Hello, World!")
+    })
+    e.Logger.Fatal(e.Start(":1323"))
+  }
+*/
 package catfacts
 
 import (
@@ -6,6 +29,7 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
+// getCatFactsConst holds cat facts text data.
 func getCatFactsConst() []string {
 	return []string{
 		// from http://maxellah.tripod.com/catfacts.htm
@@ -52,6 +76,8 @@ func getCatFactsConst() []string {
 	}
 }
 
+// CatFactsMiddleware is a middleware that to add cat facts
+// in headers of HTTP responses.
 func CatFactsMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 	facts := getCatFactsConst()
 	count := len(facts)
