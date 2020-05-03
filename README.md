@@ -29,6 +29,8 @@ func main() {
 
 ```
 
+![result](https://i.imgur.com/I0HakkU.png)
+
 ## Usage
 Any URL will have a `X-Cat-Fact` header in the response, that will contain a random cat fact for your amusement.
 
