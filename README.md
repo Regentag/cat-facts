@@ -5,6 +5,8 @@ Response Headers:
 X-Cat-Facts: A cat has 32 muscles in each ear.
 ```
 
+All cat facts in this module are from [http://maxellah.tripod.com/catfacts.htm](http://maxellah.tripod.com/catfacts.htm).
+
 ## Example
 ```
 package main
