@@ -1,5 +1,5 @@
 # cat-facts
-[Echo](https://echo.labstack.com/) middleware that to add cat facts in headers of HTTP responses. Inspired by [cat_facts](https://github.com/fabrik42/cat_facts).
+[Echo](https://echo.labstack.com/) middleware that to add cat facts in headers of HTTP responses. Inspired by [fabrik42/cat_facts](https://github.com/fabrik42/cat_facts).
 ```
 Response Headers:
 X-Cat-Facts: A cat has 32 muscles in each ear.
